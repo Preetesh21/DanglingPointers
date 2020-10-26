@@ -4,11 +4,6 @@ body {
     background-color: #03396c !important;
 }
 
-#card {
-    margin: 0;
-    padding: 0;
-}
-
 #wrap {
     overflow: hidden;
     position: absolute;
