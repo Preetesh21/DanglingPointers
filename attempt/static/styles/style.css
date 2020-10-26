@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #03396c;
+    background-color: #03396c !important;
 }
 
 #card {
