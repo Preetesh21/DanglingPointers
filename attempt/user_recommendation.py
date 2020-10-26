@@ -2,8 +2,7 @@ import pandas as pd
 import json 
 from keras.models import model_from_json
 import numpy as np 
- 
- 
+
 def predict(user_id=100):
         ratings_df=pd.read_csv("ratings.csv")
         # load json and create model
@@ -22,7 +21,7 @@ def predict(user_id=100):
         user = np.array([user_id for i in range(len(b_id))])
         pred = loaded_model.predict([book_arr, user])
         pred = pred.reshape(-1) #reshape to single dimension
-        pred_ids = (-pred).argsort()[0:5]
+        pred_ids = (-pred).argsort()[0:10]
 
         with open("web_book_data.json", "r") as read_it: 
                 data = json.load(read_it) 

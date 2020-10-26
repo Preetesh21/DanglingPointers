@@ -11,8 +11,10 @@ def home():
 def predicts():
     print(request.args.get("user"))
     ans=predict(int(request.args.get("user")))
-    print(ans)
-    return jsonify(ans)
+    for obj in ans:
+        print(obj["Descriptions"])
+        print('\n')
+    return render_template("index2.html",len = len(ans), objects = ans)
     #print(req.user)
     
 if __name__ == "__main__":
