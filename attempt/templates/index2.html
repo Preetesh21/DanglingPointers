@@ -36,10 +36,10 @@
         {% endif %}
         <div class="card" style="width: 25rem;margin:7px">
             <img class="card-img-top" src={{objects[i][ "Links"]}} alt="Card image cap">
-            <div class="card-body">
+            <div class="d-flex flex-column card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text">{{objects[i]["Descriptions"].split('\'')[1]}}</p>
-                <a href={{objects[i][ "Links"]}} class="btn btn-primary">View full size</a>
+                <a href={{objects[i][ "Links"]}} class="mt-auto btn btn-primary">View full size</a>
             </div>
         </div>
         {% if i%5 == 4 %}
