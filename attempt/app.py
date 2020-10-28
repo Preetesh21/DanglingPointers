@@ -26,5 +26,17 @@ def predicts():
 @app.route('/instatrends')
 def insta_predict():
     print("Hello")
+    return 'instatrends'
+
+@app.route('/bolly')
+def bolly_predict():
+    print("Hello")
+    return 'Bollywood trends'
+
+@app.route('/fashion')
+def fashion_predict():
+    print("Hello")
+    return 'Fashion'
+
 if __name__ == "__main__":
     app.run(debug=True)
