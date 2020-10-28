@@ -27,7 +27,7 @@ def predicts():
 @app.route('/instatrends')
 def insta_predict():
     print("Hello")
-    trends = pd.read_csv('products_from_instagram.csv')
+    trends = pd.read_csv('scrapped_products/products_from_instagram.csv')
     links = list(trends["Product URL"])
     return render_template('index3.html',len = len(links), objects = links)
 
