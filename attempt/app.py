@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request,jsonify
 from user_recommendation import predict
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -26,7 +27,9 @@ def predicts():
 @app.route('/instatrends')
 def insta_predict():
     print("Hello")
-    return 'instatrends'
+    trends = pd.read_csv('products_from_instagram.csv')
+    links = list(trends["Product URL"])
+    return render_template('index3.html',len = len(links), objects = links)
 
 @app.route('/bolly')
 def bolly_predict():

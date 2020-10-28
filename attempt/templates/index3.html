@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS -->
+    <title>What's on Insta!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="/"><b>STYLER</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="instatrends">Instagram Trends</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Bollywood trends</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Fashion news</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/predict" method="get" id="form1">
+                <input class="form-control mr-sm-2" type="number" id="fname" placeholder="Search" name="user" value="100"><br>
+                <button class="btn btn-success my-2 my-sm-0" type="submit" form="form1" value="Submit">Submit</button>
+            </form>
+        </div>
+    </nav>
+    {%for i in range(0, len)%} {% if i%5 == 0 %}
+    <div class="card-deck">
+        {% endif %}
+        <div class="card" style="width: 25rem;margin:7px">
+            <img class="card-img-top" src={{objects[i]}} alt="Card image cap">
+            <div class="d-flex flex-column card-body">
+                <h5 class="card-title"></h5>
+                <a href={{objects[i]}} class="mt-auto btn btn-primary">View full size</a>
+                <a href="#" class="btn btn-light" style="margin-top: 5px;background-color:lightpink">3D Try on!</a>
+                <h6>Did you like it?</h6>
+                <!-- star rating  -->
+            </div>
+        </div>
+        {% if i%5 == 4 %}
+    </div>
+    {% endif %} {%endfor%}
+</body>
+
+</html>
