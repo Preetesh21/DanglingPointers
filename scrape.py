@@ -27,5 +27,9 @@ for key in keywords :
         for style in fashion_list:
             new_url = core_url +key+gen+style
             links_list.append(new_url)
-scrap_latest_fashion(links_list)
 
+core_url = "https://www.myntra.com/new-trends?p="
+for i in range(1,5):
+    new_url = core_url + str(i)
+    links_list.append(new_url)
+scrap_latest_fashion(links_list)

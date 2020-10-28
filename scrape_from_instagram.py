@@ -16,10 +16,6 @@ def scrap_latest_fashion(links_list):
     df = pd.DataFrame({'Product URL':Links, 'Descriptions':Descriptions}) 
     df.to_csv('products_latest.csv', index=False, encoding='utf-8')
 
-core_url = "https://www.myntra.com/new-trends?p="
-links_list = []
-for i in range(1,10):
-    new_url = core_url + str(i)
-    links_list.append(new_url)
-scrap_latest_fashion(links_list)
+core_url = "www.instagram.com"
+
 
