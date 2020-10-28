@@ -41,8 +41,7 @@ def bolly_predict():
 def fashion_predict():
     ans=news()
     print(ans)
-    return render_template('index4.html', objects = ans)
-    return str(ans)
+    return render_template('index4.html',objects=ans)
 
 if __name__ == "__main__":
     app.run(debug=True)
