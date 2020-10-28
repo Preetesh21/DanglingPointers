@@ -35,7 +35,7 @@ def insta_predict():
 @app.route('/bolly')
 def bolly_predict():
     print("Hello")
-    return 'Bollywood trends'
+    return render_template('index5.html')
 
 @app.route('/fashion')
 def fashion_predict():
