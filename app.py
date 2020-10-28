@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request,jsonify
 from user_recommendation import predict
 import pandas as pd
+from fashion_news import news
 
 app = Flask(__name__)
 
@@ -38,8 +39,9 @@ def bolly_predict():
 
 @app.route('/fashion')
 def fashion_predict():
-    print("Hello")
-    return 'Fashion'
+    ans=news()
+    print(ans)
+    return str(ans)
 
 if __name__ == "__main__":
     app.run(debug=True)
