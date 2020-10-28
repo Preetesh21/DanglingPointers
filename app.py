@@ -41,6 +41,7 @@ def bolly_predict():
 def fashion_predict():
     ans=news()
     print(ans)
+    # for url https://www.vogue.in/
     return render_template('index4.html',objects=ans)
 
 if __name__ == "__main__":
