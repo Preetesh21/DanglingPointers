@@ -2,10 +2,11 @@
 <div class="card-group">
     {% endif %}
     <div class="card" style="width:40rem;margin:7px">
-        <img class="card-img-top" src={{objects[i]}} alt="Card image cap">
+        <img class="card-img-top" src={{objects[i][ "url"]}} alt="Card image cap">
         <div class="d-flex flex-column card-body">
             <h5 class="card-title"></h5>
             <a href={{objects[i]}} class="mt-auto btn btn-primary">View full size</a>
+            <P>{{objects[i][ "tag"]}}</P>
             <a href="#" class="btn btn-light" style="margin-top: 5px;background-color:lightpink">3D Try on!</a>
             <h6>Did you like it?</h6>
             <!-- star rating  -->

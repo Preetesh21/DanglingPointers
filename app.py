@@ -24,13 +24,18 @@ def predicts():
         item['Descriptions'] = final_des
     
     return render_template("index2.html",len = len(ans), objects = ans)
-    #print(req.user)
+
 @app.route('/instatrends')
 def insta_predict():
-    # print("Hello")
-    trends = pd.read_csv('scrapped_products/products_from_instagram.csv')
-    links = list(trends["Product URL"])
-    return render_template('index3.html',len = len(links), objects = links)
+    trends = pd.read_csv('products.csv')
+    ans=[]
+    for _,row in trends.iterrows():
+        quote = {}  
+        quote['url'] = row['Product URL'] 
+        quote['tag'] = row['tags']
+        ans.append(quote)
+    
+    return render_template('index3.html',len = len(ans), objects = ans)
 
 @app.route('/bolly')
 def bolly_predict():
