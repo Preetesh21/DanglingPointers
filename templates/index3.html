@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block title %}What's on Insta!{% endblock %} {% block body %} {%for i in range(0, len)%} {% if i%5 == 0 %}
-<div class="card-deck">
+<div class="card-group">
     {% endif %}
-    <div class="card" style="width: 25rem;margin:7px">
+    <div class="card" style="width:40rem;margin:7px">
         <img class="card-img-top" src={{objects[i]}} alt="Card image cap">
         <div class="d-flex flex-column card-body">
             <h5 class="card-title"></h5>
