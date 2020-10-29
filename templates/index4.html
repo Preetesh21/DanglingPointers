@@ -2,11 +2,11 @@
 <div class="card-group">
     {% endif %}
     <div class="card" style="margin:2px;">
-        <img class="card-img-top" src={{objects[i][ "img"]}} alt="Card image cap">
+        <img class="card-img-top" src={{objects[i][ "img"]}} style="height: 12vw;width:auto" alt="Card image cap">
         <div class="d-flex flex-column card-body">
             <h5 class="card-title"></h5>
             <p class="card-text">{{objects[i]["text"]}}</p>
-            <a href=https://www.vogue.in/{{objects[i][ "url"]}} class="mt-auto btn btn-primary">View full story</a>
+            <a href=https://www.vogue.in{{objects[i][ "url"]}} class="mt-auto btn btn-primary">View full story</a>
             <!-- <a href="#" class="btn btn-light" style="margin-top: 5px;background-color:lightpink">3D Try on!</a> -->
         </div>
     </div>
