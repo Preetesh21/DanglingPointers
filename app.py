@@ -11,7 +11,7 @@ def home():
 
 @app.route('/predict')
 def predicts():
-    print(request.args.get("user"))
+    # print(request.args.get("user"))
     ans=predict(int(request.args.get("user")))
     for item in ans :
         final_des = ""
@@ -27,20 +27,20 @@ def predicts():
     #print(req.user)
 @app.route('/instatrends')
 def insta_predict():
-    print("Hello")
+    # print("Hello")
     trends = pd.read_csv('scrapped_products/products_from_instagram.csv')
     links = list(trends["Product URL"])
     return render_template('index3.html',len = len(links), objects = links)
 
 @app.route('/bolly')
 def bolly_predict():
-    print("Hello")
+    # print("Hello")
     return render_template('index5.html')
 
 @app.route('/fashion')
 def fashion_predict():
     ans=news()
-    print(ans)
+    # print(ans)
     # for url https://www.vogue.in/
     return render_template('index4.html',len = len(ans),objects=ans)
 
