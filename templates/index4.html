@@ -2,7 +2,7 @@
 <div class="card-group">
     {% endif %}
     <div class="card" style="margin:2px;">
-        <img class="card-img-top" src={{objects[i][ "img"]}} style="height: 12vw;width:auto" alt="Card image cap">
+        <img class="card-img-top" src={{objects[i][ "img"]}} srcset={{objects[i][ "srcset"]}}, alt="Card image cap">
         <div class="d-flex flex-column card-body">
             <h5 class="card-title"></h5>
             <p class="card-text">{{objects[i]["text"]}}</p>

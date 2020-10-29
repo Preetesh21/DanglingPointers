@@ -13,6 +13,10 @@ def news():
         quote['text']=row.a.text
       if(row.img is not None):
         quote['img'] = row.img['src']
+        quote['srcset']=row.img['srcset']
+        s=quote['srcset']
+        a=s.split(',')
+        quote['srcset']=a[2]
       if quote: 
         quotes.append(quote)
         
