@@ -4,14 +4,14 @@ from keras.models import model_from_json
 import numpy as np 
 
 def predict(user_id=100):
-        ratings_df=pd.read_csv("ratings.csv")
+        ratings_df=pd.read_csv("Recommender_system/ratings.csv")
         # load json and create model
-        json_file = open('./model.json', 'r')
+        json_file = open('Recommender_system/model.json', 'r')
         loaded_model_json = json_file.read()
         json_file.close()
         loaded_model = model_from_json(loaded_model_json)
         # load weights into new model
-        loaded_model.load_weights("./model.h5")
+        loaded_model.load_weights("Recommender_system/model.h5")
         #print("Loaded model from disk")
 
         b_id =list(ratings_df.book_id.unique())
@@ -23,7 +23,7 @@ def predict(user_id=100):
         pred = pred.reshape(-1) #reshape to single dimension
         pred_ids = (-pred).argsort()[0:10]
 
-        with open("web_book_data.json", "r") as read_it: 
+        with open("Recommender_system/web_book_data.json", "r") as read_it: 
                 data = json.load(read_it) 
 
         d=[]

@@ -1,7 +1,8 @@
 from flask import Flask,render_template,request,jsonify
-from user_recommendation import predict
 import pandas as pd
-from fashion_news import news
+import sys
+from Recommender_system.user_recommendation import predict
+from fashion_news.fashion_news import news
 
 app = Flask(__name__)
 
@@ -30,7 +31,7 @@ def predicts():
 
 @app.route('/instatrends')
 def insta_predict():
-    trends = pd.read_csv('products.csv')
+    trends = pd.read_csv('scrapped_products/products.csv')
     ans=[]
     for _,row in trends.iterrows():
         quote = {}  
