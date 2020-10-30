@@ -38,8 +38,8 @@ What we aim to do is to either build an integration for the current Myntra Platf
 
 ### The Idea and the Workflow
 
-![img](idea.png)
-Here the chart explains the overall working process of the app starting from AI model recommending dresses to user's based on their past preferences and the latest trends collected across various mediums and then providing the 3D view facility to the customer as well in UI.
+![img](idea.PNG)
+Here the chart explains the overall working process of the app starting from AI model recommending dresses to user's based on their past preferences and the latest trends collected across various mediums and then providing the 3D view facility to the customer as well in UI.In various sections we have also used a Deep Learning Model for clothes classification using the VGG16 model.
 
 ### How Does It work
 
