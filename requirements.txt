@@ -1,0 +1,9 @@
+numpy==1.17.2
+selenium==3.141.0
+Flask==1.1.1
+Keras==2.4.3
+requests==2.22.0
+pandas==0.25.1
+opencv_python==4.2.0.32
+beautifulsoup4==4.9.3
+Pillow==8.0.1
