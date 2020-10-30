@@ -43,7 +43,7 @@ Here the chart explains the overall working process of the app starting from AI 
 
 ### How Does It work
 
-
+![img](working.gif)
 
 ### Key Technologies :-
 

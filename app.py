@@ -12,7 +12,10 @@ def home():
 @app.route('/predict')
 def predicts():
     # print(request.args.get("user"))
-    ans=predict(int(request.args.get("user")))
+    if request.args.get("user"):
+        ans=predict(int(request.args.get("user")))
+    else:
+        ans=predict(100)
     for item in ans :
         final_des = ""
         full_des = item['Descriptions']

@@ -12,7 +12,7 @@ def predict(user_id=100):
         loaded_model = model_from_json(loaded_model_json)
         # load weights into new model
         loaded_model.load_weights("./model.h5")
-        print("Loaded model from disk")
+        #print("Loaded model from disk")
 
         b_id =list(ratings_df.book_id.unique())
         b_id.remove(10000)
