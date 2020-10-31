@@ -91,16 +91,6 @@ Driving forces behind E commerce are Global Customers – Presence of customers 
 
  We as a youth, are very conscious about our dressing sense and we always try to look nice and up to date with latest fashion. As we always try to copy celeb’s fashion trends, Styler will make our life easy by recommending us what trend we need to follow in no time. 
 
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## Contact
 
 Team DanglingPointers - [Garima Soni](mailto:2018csb1089@iitrpr.ac.in?subject=[GitHub]%20Source%20Han%20Sans) and [Preetesh Verma](mailto:2018eeb1171@iitrpr.ac.in?subject=[GitHub]%20Source%20Han%20Sans) 
